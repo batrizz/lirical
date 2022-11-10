@@ -10,9 +10,7 @@ export default function App({
 }: AppProps) {
   return (
     <Context>
-      <GlobalAnimations>
-        <SsrComponent {...ssrPageProps} />
-      </GlobalAnimations>
+      <SsrComponent {...ssrPageProps} />
     </Context>
   )
 }
