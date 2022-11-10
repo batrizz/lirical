@@ -12,24 +12,10 @@ export default function Home() {
     <Container>
       <SEO
         title="Pagina inicial"
-        description="Pagina criada por solrachix"
+        description="Pagina criada por Beatriz"
         icon={Favicon.src}
         image={OgImage.src}
       />
-
-      <h1>
-        Template por{' '}
-        <span>
-          <a href="https://solrachix.app" target="_blank" rel="noreferrer">
-            Solrachix
-          </a>
-        </span>
-        💙
-      </h1>
-
-      <Link href="/teste">
-        <a>Ir para area segura ➡️</a>
-      </Link>
     </Container>
   )
 }
