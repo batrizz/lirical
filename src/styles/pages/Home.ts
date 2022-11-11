@@ -6,42 +6,17 @@ export const Container = styled.div`
   height: 100vh;
 
   display: flex;
-  justify-content: center;
   align-items: center;
-  flex-direction: column;
-  gap: 1rem;
+  justify-content: center;
+  position: relative;
+  overflow-y: hidden;
 
-  h1 {
-    font-size: 4rem;
-    font-weight: bold;
+  background: ${props => props.theme.colors.primary.normal};
 
-    span {
-      color: ${props => props.theme.colors.primary.normal};
-    }
-
-    a {
-      font-size: inherit;
-      font-weight: bold;
-      text-decoration: none;
-
-      transition: all 0.2s;
-
-      &:hover {
-        opacity: 0.5;
-      }
-    }
-  }
-
-  a {
-    text-decoration: underline;
-
-    color: ${props => props.theme.colors.primary.normal};
-  }
-
-  button {
-    background: transparent;
-    border: none;
-
-    color: ${props => props.theme.colors.primary.normal};
+  > svg {
+    display: flex;
+    position: absolute;
+    right: 0;
+    z-index: 10;
   }
 `

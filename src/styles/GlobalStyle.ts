@@ -1,5 +1,5 @@
 import { createGlobalStyle } from 'styled-components'
-import { rgba } from 'polished'
+// import { rgba } from 'polished'
 
 export default createGlobalStyle`
   * {
@@ -13,10 +13,10 @@ export default createGlobalStyle`
     width: 100vw;
     max-height: 100vh;
 
-    background: ${props => props.theme.colors.background.dark};
+    background: ${props => props.theme.colors.background.normal};
     color: ${props => props.theme.colors.text.normal};
 
-    font-family: Roboto, sans-serif !important;
+    font-family: Nunito, sans-serif !important;
   }
 
   @media (max-width: 1080px){
@@ -37,11 +37,11 @@ export default createGlobalStyle`
     outline: none;
 
     text-decoration: none;
-    font: 400 1rem  Roboto, sans-serif;
+    font: 400 1rem  Nunito, sans-serif;
   }
   h1, h2, h3, h4, h5, h6 {
     font-weight: 400;
-    color: ${({ theme }) => theme.colors.text.title};
+    color: ${({ theme }) => theme.colors.text.normal};
   }
   button {
     cursor: pointer;
