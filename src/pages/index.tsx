@@ -12,3 +12,15 @@ export default function Home() {
     </Container>
   )
 }
+
+// import { Container } from './styles'
+
+// function Test() {
+//   return (
+//     <Container>
+//       <h1>Test</h1>
+//     </Container>
+//   )
+// }
+
+// export default Test

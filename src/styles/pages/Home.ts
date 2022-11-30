@@ -8,15 +8,15 @@ export const Container = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  position: relative;
   overflow-y: hidden;
 
   background: ${props => props.theme.colors.primary.normal};
 
   > svg {
     display: flex;
-    position: absolute;
+    position: fixed;
     right: 0;
+    top: 0;
     z-index: 10;
   }
 `
