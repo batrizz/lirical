@@ -1,6 +1,5 @@
 import { Container } from './styles'
 
-import Makeup from '../../assets/images/makeup.svg'
 import Logo from '../../assets/images/logo.svg'
 import Instagram from '../../assets/icons/instagram.svg'
 import Gmail from '../../assets/icons/gmail.svg'
@@ -9,43 +8,64 @@ import Twitter from '../../assets/icons/twitter.svg'
 import Input from '../Input'
 import Button from '../Button'
 
-function FormLogin() {
+interface IFormProps {
+  imgLeftSide?: any
+  textWelcome?: string
+  input?: any
+}
+
+function FormLogin({ imgLeftSide, textWelcome, input }: IFormProps) {
   return (
     <Container>
-      <section className="makeup">
-        <Makeup />
-      </section>
+      <section className="imgLeftSide">{imgLeftSide}</section>
       <section>
         <div />
         <div className="welcome">
           <p>Bem vindo(a)</p>
-          <h1>
-            <b>Acesse e marque um horário</b> com a melhor plataforma de
-            agendamento em estética
-          </h1>
+          <h1>{textWelcome}</h1>
         </div>
         <div className="icons">
-          <Instagram />
-          <Facebook />
-          <Gmail />
-          <Twitter />
+          <a href="#">
+            <Instagram />
+          </a>
+          <a href="#">
+            <Facebook />
+          </a>
+          <a href="#">
+            <Gmail />
+          </a>
+          <a href="#">
+            <Twitter />
+          </a>
         </div>
       </section>
-      <section>
-        <Logo />
-        <form>
-          <Input type="text" placeholder="E-mail" />
-          <Input type="text" placeholder="Senha" />
-
-          <Button name="Confirmar" type="submit" />
-        </form>
-        <p>
-          Ainda não tem um cadastro? <b>cadastre-se aqui</b>
-        </p>
-        <p>
-          ou esqueceu sua senha? <b>alterar senha</b>
-        </p>
-        <Button name="Confirmar" type="submit" />
+      <section className="formLogin">
+        <div>
+          <Logo />
+          <form>
+            {input}
+            <Button name="Entrar" type="submit" />
+          </form>
+          <p>
+            Ainda não tem um cadastro?
+            <a href="#">
+              <b> cadastre-se aqui</b>
+            </a>
+          </p>
+          <p>
+            ou esqueceu sua senha?
+            <a href="#">
+              <b> alterar senha</b>
+            </a>
+          </p>
+        </div>
+        <div>
+          <Button
+            className="buttonClinica"
+            name="Login Clínica"
+            type="button"
+          />
+        </div>
       </section>
     </Container>
   )

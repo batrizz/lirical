@@ -11,7 +11,7 @@ export const Container = styled.div`
   box-shadow: 0px 4px 160px rgba(0, 0, 0.1, 0.1);
   z-index: 100;
 
-  .makeup {
+  .imgLeftSide {
     > svg {
       width: 100%;
       height: 100%;
@@ -29,24 +29,59 @@ export const Container = styled.div`
       justify-content: left;
       padding: 0 3rem;
     }
-    .welcome {
+  }
+  .welcome {
+    flex-direction: column;
+    p {
+      color: ${props => props.theme.colors.primary.normal};
+    }
+    h1 {
+      width: 14rem;
+      color: ${props => props.theme.colors.text.dark};
+    }
+  }
+  .icons {
+    align-items: flex-end;
+    padding-bottom: 3rem;
+    gap: 2rem;
+    > a svg {
+      width: 1.5rem;
+      height: 1.5rem;
+      flex-shrink: inherit;
+    }
+  }
+
+  .formLogin {
+    p {
+      font-size: 14px;
+      color: ${props => props.theme.colors.text.dark};
+    }
+    div:first-child {
+      width: 100%;
+      height: 80%;
+      display: flex;
       flex-direction: column;
-      p {
-        color: ${props => props.theme.colors.primary.normal};
+      align-items: center;
+      justify-content: center;
+
+      form {
+        padding: 3rem 0 1rem 0;
       }
-      h1 {
-        width: 14rem;
-        color: ${props => props.theme.colors.text.dark};
+      svg {
+        max-width: 8rem;
       }
     }
-    .icons {
+    div:last-child {
+      width: 100%;
+      height: 20%;
+
+      display: flex;
+      flex-direction: column;
       align-items: flex-end;
-      padding-bottom: 3rem;
-      gap: 2rem;
-      > svg {
-        width: 2rem;
-        height: 2rem;
-        flex-shrink: inherit;
+      justify-content: center;
+
+      .buttonClinica {
+        max-width: 12rem;
       }
     }
   }

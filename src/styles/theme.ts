@@ -5,7 +5,8 @@ export const LightTheme = {
   colors: {
     primary: {
       light: '#FFCCD8',
-      normal: '#FFB5C7'
+      normal: '#FFB5C7',
+      dark: '#FFAABE'
     },
 
     icons: {
