@@ -1,17 +1,14 @@
+import { HtmlHTMLAttributes } from 'react'
+
 import { Container } from './styles'
 
-interface IButtonProps {
+type IButtonProps = {
   type: any
   name: string
   className?: any
-}
+  onClick?: any
+} & HtmlHTMLAttributes<HTMLButtonElement>
 
-function Button({ type, name, className }: IButtonProps) {
-  return (
-    <Container className={className} type={type}>
-      {name}
-    </Container>
-  )
-}
-
-export default Button
+export const Button = ({ name, ...props }: IButtonProps) => (
+  <Container {...props}>{name}</Container>
+)

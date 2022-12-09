@@ -5,16 +5,27 @@ import Instagram from '../../assets/icons/instagram.svg'
 import Gmail from '../../assets/icons/gmail.svg'
 import Facebook from '../../assets/icons/facebook.svg'
 import Twitter from '../../assets/icons/twitter.svg'
-import Input from '../Input'
-import Button from '../Button'
+import { Button } from '../Button'
 
 interface IFormProps {
   imgLeftSide?: any
   textWelcome?: string
   input?: any
+  signIn?: any
+  forgotPassword?: any
+  buttonLogin?: string
+  onClick?: any
 }
 
-function FormLogin({ imgLeftSide, textWelcome, input }: IFormProps) {
+function FormLogin({
+  imgLeftSide,
+  textWelcome,
+  input,
+  signIn,
+  forgotPassword,
+  buttonLogin,
+  onClick
+}: IFormProps) {
   return (
     <Container>
       <section className="imgLeftSide">{imgLeftSide}</section>
@@ -46,23 +57,14 @@ function FormLogin({ imgLeftSide, textWelcome, input }: IFormProps) {
             {input}
             <Button name="Entrar" type="submit" />
           </form>
-          <p>
-            Ainda não tem um cadastro?
-            <a href="#">
-              <b> cadastre-se aqui</b>
-            </a>
-          </p>
-          <p>
-            ou esqueceu sua senha?
-            <a href="#">
-              <b> alterar senha</b>
-            </a>
-          </p>
+          {signIn}
+          {forgotPassword}
         </div>
         <div>
           <Button
+            onClick={onClick}
             className="buttonClinica"
-            name="Login Clínica"
+            name={buttonLogin}
             type="button"
           />
         </div>

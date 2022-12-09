@@ -1,35 +1,34 @@
-import React from 'react'
 import { useRouter } from 'next/router'
 
 import FormLogin from '@/components/FormLogin'
-import Input from '../components/Input'
+import Input from '@/components/Input'
 
-import Makeup from '../assets/images/makeup.svg'
 import Back from '../assets/images/Back.svg'
+import Work from '../assets/images/work.svg'
 
 import { Container } from '../styles/pages/Home'
 
-export default function Home() {
+function loginAdmin() {
   const router = useRouter()
   return (
     <Container>
       <Back />
       <FormLogin
         textWelcome={
-          'Acesse e marque um horário com a melhor plataforma de agendamento em estética'
+          'Insira sua clínica em nosso sistema para facilitar a organização da sua agenda'
         }
-        imgLeftSide={<Makeup />}
+        imgLeftSide={<Work />}
         input={
           <>
-            <Input type="text" placeholder="E-mail" />
+            <Input type="text" placeholder="E-mail corporativo" />
             <Input type="text" placeholder="Senha" />
           </>
         }
         signIn={
           <p>
-            Ainda não tem um cadastro?
+            Quer adquirir nosso serviços?
             <a href="#">
-              <b> Cadastre-se aqui</b>
+              <b> Entre em contato</b>
             </a>
           </p>
         }
@@ -41,21 +40,11 @@ export default function Home() {
             </a>
           </p>
         }
-        buttonLogin={'Login Clínica'}
-        onClick={() => router.push('/loginAdmin')}
+        buttonLogin={'Login Usuário'}
+        onClick={() => router.push('/')}
       />
     </Container>
   )
 }
 
-// import { Container } from './styles'
-
-// function Test() {
-//   return (
-//     <Container>
-//       <h1>Test</h1>
-//     </Container>
-//   )
-// }
-
-// export default Test
+export default loginAdmin
