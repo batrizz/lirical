@@ -9,7 +9,7 @@ import { Button } from '../Button'
 
 interface IFormProps {
   imgLeftSide?: any
-  textWelcome?: string
+  textWelcome?: any
   input?: any
   signIn?: any
   forgotPassword?: any

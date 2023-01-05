@@ -1,6 +1,25 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow-y: hidden;
+
+  background: ${props => props.theme.colors.primary.normal};
+
+  > svg {
+    display: flex;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 10;
+  }
+`
+export const FormSignIn = styled.div`
   width: 70rem;
   height: 40rem;
   display: grid;
@@ -56,9 +75,9 @@ export const Container = styled.div`
       cursor: pointer;
       color: ${props => props.theme.colors.text.dark};
     }
-    div:first-child {
+    > div {
       width: 100%;
-      height: 80%;
+      height: 100%;
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -69,19 +88,6 @@ export const Container = styled.div`
       }
       svg {
         max-width: 8rem;
-      }
-    }
-    div:last-child {
-      width: 100%;
-      height: 20%;
-
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
-      justify-content: center;
-
-      .buttonClinica {
-        max-width: 12rem;
       }
     }
   }

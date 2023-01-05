@@ -7,6 +7,7 @@ import Back from '../assets/images/Back.svg'
 import Work from '../assets/images/work.svg'
 
 import { Container } from '../styles/pages/Home'
+import Link from 'next/link'
 
 function loginAdmin() {
   const router = useRouter()
@@ -27,17 +28,17 @@ function loginAdmin() {
         signIn={
           <p>
             Quer adquirir nosso serviços?
-            <a href="#">
+            <Link href="/">
               <b> Entre em contato</b>
-            </a>
+            </Link>
           </p>
         }
         forgotPassword={
           <p>
             ou esqueceu sua senha?
-            <a href="#">
+            <Link href="/">
               <b> Alterar senha</b>
-            </a>
+            </Link>
           </p>
         }
         buttonLogin={'Login Usuário'}

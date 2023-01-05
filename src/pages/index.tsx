@@ -8,6 +8,7 @@ import Makeup from '../assets/images/makeup.svg'
 import Back from '../assets/images/Back.svg'
 
 import { Container } from '../styles/pages/Home'
+import Link from 'next/link'
 
 export default function Home() {
   const router = useRouter()
@@ -16,29 +17,32 @@ export default function Home() {
       <Back />
       <FormLogin
         textWelcome={
-          'Acesse e marque um horário com a melhor plataforma de agendamento em estética'
+          <h1>
+            Acesse e <b> marque um horário </b>com a melhor plataforma de
+            agendamento em estética
+          </h1>
         }
         imgLeftSide={<Makeup />}
         input={
           <>
             <Input type="text" placeholder="E-mail" />
-            <Input type="text" placeholder="Senha" />
+            <Input type="password" placeholder="Senha" />
           </>
         }
         signIn={
           <p>
             Ainda não tem um cadastro?
-            <a href="#">
+            <Link href="/cadastro">
               <b> Cadastre-se aqui</b>
-            </a>
+            </Link>
           </p>
         }
         forgotPassword={
           <p>
             ou esqueceu sua senha?
-            <a href="#">
+            <Link href="#">
               <b> Alterar senha</b>
-            </a>
+            </Link>
           </p>
         }
         buttonLogin={'Login Clínica'}
